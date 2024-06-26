@@ -1,0 +1,21 @@
+계정 로그인
+sqlplus system/user1
+
+테이블 확인
+select * from tab;	
+
+현재 접속 계정 확인
+show user;
+
+계정 생성	  아이디                    비번
+create user scott identified by tiger account unlock;
+
+권한 부여 자원, 접속
+grant resource, connect
+to scott;
+
+테이블스페이스 설정 변경
+ALTER USER scott DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
+
+다른 계정으로 접속
+conn scott/tiger;
